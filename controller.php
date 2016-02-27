@@ -2,6 +2,7 @@
 
 	$tipo = $_POST["tipo"];
 	$datos = $_POST["data"];
+	
 //Registra un cambio
 	function change(){
 		//global $a;
