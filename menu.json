@@ -1,0 +1,284 @@
+//El JSON es tratado como una variable para evitar parsearla
+
+var _menu = {
+	"MSONversion":"1.0",
+	"menu":{
+		"gorditas":{
+			"regular":{
+				"nombre":"Gordita",
+				"precio":18,
+				"ingredientes":["Lechuga", "Cebolla", "Zanahoria", "Pepino","Crema", "Queso blanco", "Frijol", "Carne", "Papa", "Gordita"],
+				"consome" : true,
+			},
+			"asiento":{
+				"nombre":"Gordita de asiento",
+				"precio":20,
+				"ingredientes":["Asiento","Queso chihuahua","Lechuga", "Cebolla", "Zanahoria", "Pepino","Crema", "Queso blanco", "Gordita"],
+				"consome" : true,
+			},
+			"especial":{
+				"nombre":"Gordita especial",
+				"precio":22,
+				"ingredientes":["Asiento","Queso chihuahua","Lechuga", "Cebolla", "Zanahoria", "Pepino","Crema", "Queso blanco", "Carne", "Gordita"],
+				"consome" : true,
+			},
+			"gratinada":{
+				"nombre":"Gordita gratinada",
+				"precio":18,
+				"ingredientes":["Queso chihuahua","Lechuga", "Cebolla", "Zanahoria", "Pepino","Crema", "Queso blanco", "Frijol", "Carne", "Gordita"],
+				"consome" : true,
+			}
+		},
+		"tostadas":{
+			"regular":{
+				"nombre":"Tostada",
+				"precio":18,
+				"ingredientes":["Lechuga", "Cebolla", "Zanahoria", "Pepino","Crema", "Queso blanco", "Frijol", "Carne", "Tostada"],
+				"consome" : true,
+			},
+			"volteada":{
+				"nombre":"Volteada",
+				"precio":18,
+				"ingredientes":["Lechuga", "Cebolla", "Zanahoria", "Pepino","Crema", "Queso blanco", "Frijol", "Carne", "Tostada"],
+				"opcional":["Tostada"],
+				"consome" : true,
+			},
+			"gratinada":{
+				"nombre":"Tostada gratinada",
+				"precio":22,
+				"ingredientes":["Lechuga", "Cebolla", "Zanahoria", "Pepino","Crema", "Queso blanco", "Carne", "Tostada"],
+				"consome" : true,
+			}
+		},
+		"tacos":{
+			"regular":{
+				"nombre":"Taco",
+				"precio":18,
+				"ingredientes":["Lechuga", "Cebolla", "Zanahoria", "Pepino","Crema", "Queso blanco", "Carne", "Papa"],
+				"consome" : true,
+			},
+			"requeson":{
+				"nombre":"Taco requeson",
+				"precio":20,
+				"ingredientes":["Lechuga", "Cebolla", "Zanahoria", "Pepino","Crema", "Queso blanco", "Requeson"],
+				"consome" : true,
+			},
+			"ahogados":{
+				"nombre":"Tacos ahogados",
+				"multiplo":3,
+				"precio":50,
+				"ingredientes":["Lechuga", "Cebolla", "Zanahoria", "Pepino","Crema", "Queso blanco", "Carne", "Papa"],
+				"consome" : true,
+			}
+		},
+		"flautas":{
+			"regular":{
+				"nombre":"Flauta",
+				"precio":18,
+				"ingredientes":["Lechuga", "Cebolla", "Zanahoria", "Pepino","Crema", "Queso blanco", "Carne", "Papa"],
+				"consome" : true,
+			},
+			"requeson":{
+				"nombre":"Flauta requeson",
+				"precio":20,
+				"ingredientes":["Lechuga", "Cebolla", "Zanahoria", "Pepino","Crema", "Queso blanco", "Requeson"],
+				"consome" : true,
+			},
+			"cheese":{
+				"nombre":"Flauta cheese",
+				"precio":18,
+				"ingredientes":["Lechuga", "Cebolla", "Zanahoria", "Pepino","Crema", "Queso blanco", "Queso chihuahua"],
+				"consome" : true,
+			},
+			"botaneras":{
+				"nombre":"Flautas botaneras",
+				"precio":50,
+				"ingredientes":["Lechuga", "Cebolla", "Zanahoria", "Pepino","Crema", "Queso blanco", "Panela"],
+				"consome" : true,
+			}
+		},
+		"chimis":{
+			"regular":{
+				"nombre":"Chimichanga",
+				"precio":30,
+				"ingredientes":["Lechuga", "Cebolla", "Zanahoria", "Pepino","Crema", "Queso blanco", "Carne", "Papa"],
+				"consome" : true,
+			},
+			"combinada":{
+				"nombre":"Chimichanga combinada",
+				"precio":32,
+				"ingredientes":["Lechuga", "Cebolla", "Zanahoria", "Pepino","Crema", "Queso blanco", "Carne", "Queso chihuahua"],
+				"consome" : true,
+			},
+			"cheese":{
+				"nombre":"Chimicheese",
+				"precio":32,
+				"ingredientes":["Lechuga", "Cebolla", "Zanahoria", "Pepino","Crema", "Queso blanco", "Queso chihuahua"],
+				"consome" : true,
+			},
+			"especial":{
+				"nombre":"Chimichanga",
+				"precio":32,
+				"ingredientes":["Lechuga", "Cebolla", "Zanahoria", "Pepino","Crema", "Queso blanco", "Carne", "Papa"],
+				"consome" : true,
+			},
+			"panela":{
+				"nombre":"Chimichanga panela",
+				"precio":32,
+				"ingredientes":["Lechuga", "Cebolla", "Zanahoria", "Pepino","Crema", "Queso blanco", "Panela"],
+				"consome" : true,
+			},
+		},
+		"quesadilla":{
+			"regular":{
+				"nombre":"Quesadilla",
+				"precio":30,
+				"ingredientes":["Lechuga", "Cebolla", "Zanahoria", "Pepino","Crema", "Queso blanco", "Queso", "Frijol"],
+				"consome" : false,
+			},
+			"especial":{
+				"nombre":"Quesadilla",
+				"precio":38,
+				"ingredientes":["Lechuga", "Cebolla", "Zanahoria", "Pepino","Crema", "Queso blanco", "Queso", "Frijol", "Carne"],
+				"consome" : false,
+			},
+		},
+		"caldos":{
+			"sopa":{
+				"nombre":"Sopa tortilla",
+				"precio":40,
+				"ingredientes":["Tortilla", "Aguacate", "Panela", "Crema", "Chipotle"],
+				"consome" : false,
+			},
+			"consome":{
+				"nombre":"Consome res",
+				"precio":40,
+				"ingredientes":["Carne", "Papa", "Chipotle"],
+				"consome" : false,
+			},
+			"pozole":{
+				"nombre":"Pozole",
+				"precios":{
+					"1": 60,
+					"1/2": 50,
+					"1/4": 30
+					},
+				"ingredientes":["grano", "carne", "caldo pozole"],
+				"opcional": ["costilla"],
+				"consome": false
+				},
+			"menudo":{
+				"nombre":"Menudo",
+				"precios":{
+					"1": 60,
+					"1/2": 50,
+					"1/4": 30
+					},
+				"ingredientes":["grano", "carne", "caldo menudo"],
+				"opcional": ["pata"],
+				"consome": false
+				},
+			"pozudo":{
+				"nombre":"Pozudo",
+				"precios":{
+					"1": 60,
+					"1/2": 50,
+					"1/4": 30
+					},
+				"ingredientes":["grano", "carne pozole", "carne menudo", "caldo pozole"],
+				"opcional": ["pata"],
+				"consome": false
+				},
+			"menudorojo":{
+				"nombre":"Menudo rojo",
+				"precios":{
+					"1": 60,
+					"1/2": 50,
+					"1/4": 30
+					},
+				"ingredientes":["grano", "carne", "caldo pozole"],
+				"opcional": ["pata"],
+				"consome": false
+				},
+		},
+		"postres":{
+			"flan":{
+				"nombre":"Flan",
+				"precio": 30
+				},
+			"tapioca":{
+				"nombre":"Tapioca",
+				"precio": 30
+				},
+			"pastellimon":{
+				"nombre":"Pastel helado de limon",
+				"precio": 30
+				},
+			"coyotas":{
+				"nombre":"Coyotas",
+				"precio": 15
+				},
+		},
+		"bebidas":{
+			"refresco":{
+				"nombres":{
+					"variedad":["CocaCola","CocaCola Light","Fanta Fresa", "Fanta Naranja", "Sangría", "Sprite", "Fresca"]
+				},
+				"precio": 12,
+				"tambiente":false,
+				"hielo": true
+			},
+			"agua":{
+				"nombre":"Ciel",
+				"precio": 10,
+				"tambiente":false,
+				"hielo": true
+			},
+			"jamaica":{
+				"nombre":"Jamaica",
+				"precios":{
+					"jarra": 40,
+					"litro": 25,
+					"vaso": 12,
+					},
+				"tambiente":false,
+				"hielo": false
+			},
+			"horchata":{
+				"nombre":"Horchata",
+				"precios":{
+					"jarra": 40,
+					"litro": 25,
+					"vaso": 12,
+					},
+				"tambiente":false,
+				"hielo": false
+			},
+			"oolong":{
+				"nombre":"Te oolong",
+				"precios":{
+					"litro": 25,
+					"botella": 15,
+					},
+				"tambiente":false,
+				"hielo": false
+			},
+			"te":{
+				"nombre":"Fuze Tea",
+				"precio": 18,
+				"tambiente":false,
+				"hielo": false
+			},
+		},
+		"otros":{
+			"charola":{
+				"nombre":"Charola",
+				"precio": 350,
+			},
+			"maluz":{
+				"nombre":"Salsa Maluz Fusion",
+				"precio": 25
+			}
+		}
+	}
+};

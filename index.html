@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <title>Proyecto la Palmera v0.07</title>
+
+  <script src="./menu.json"></script>
+
+  <link rel="stylesheet" href="./jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="./jquery-2.1.4.min.js"></script>
+  <script src="./jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script src="./script.js"></script>
+
+  <link rel="stylesheet" href="">
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <style type="text/css">
+  *{
+    /*border: 1px blue dotted;*/
+  }
+  /*
+  body {
+    width: 720px;
+    margin: auto;
+    font-family: "Helvetica", sans-serif;
+  }
+
+  .listado{
+    background-color: pink;
+  }
+
+  .listado_piezas{
+    background-color: lightblue;
+  }
+
+  .listado_ingredientes{
+    
+    background-color: lightgreen;
+  }
+  table{
+    border-collapse: collapse;}
+    
+  td{
+    border: 2px solid black;
+    padding: 5px;
+  }
+
+  .button-circle{
+    width: 40px;
+    border-radius: 50%;
+  }
+*/
+#forth{
+  height:80%;
+  overflow: scroll;
+}
+#revpedido{
+  height:20%;
+  background-color: #DDDDDD;
+}
+.lista {text-transform:capitalize;}
+
+.botonMesa{
+  display: block;
+  width:60px;
+  height:60px;
+  border-radius:50px;
+  border:none;
+  font-size:20px;
+  color:#fff;
+  line-height:100%;
+  text-align:center;
+  background:#70E848;
+      margin: 0;
+    /* background: yellow; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+   outline:none;
+}
+
+.botonMesa:hover { 
+    background-color: yellow;
+}
+
+#tablaMesas{
+  width: 100%;
+  height: 500px;
+}
+
+.contenedorBoton{
+  position: relative;
+  width: 25%;
+  height: 10%;
+}
+
+#contenidoMesas{
+  height: 100%;
+}
+  </style>
+
+</head>
+
+<body>
+<div id="pedact" data-role="page">
+  <div data-role="panel" id="mypanel" data-swipe-close="true">
+    <!-- panel content goes here -->
+    hola
+  </div><!-- /panel -->
+<div data-role="header">
+        <a data-role="button" href="#forth" data-transition="slide" class="ui-link ui-btn ui-btn-a ui-btn-right ui-icon-plus ui-btn-icon-notext  ui-corner-all"></a>
+        <h3>
+            Cenaduria la Palmera
+        </h3>
+    </div>
+<div id="back" data-role="content">
+  
+</div>
+
+<a href="#mesas" class="ui-btn ui-corner-all ui-shadow ">Panel</a>
+</div>
+
+<div id="forth" data-role="page">
+  <div id="headerMenu" data-role="header">
+        <div id="headerMenuLeft" data-role="controlgroup" data-type="horizontal" class="ui-mini ui-btn-left">
+        <a onclick="cancelarPedido()" class="ui-btn ui-corner-all ui-shadow ui-icon-carat-l ui-btn-icon-notext">Cancelar</a>
+        </div>
+
+        <h3>
+            Menú
+        </h3>
+        <div id="headerMenuRight" data-role="controlgroup" data-type="horizontal" class="ui-mini ui-btn-right">
+        <a onclick="enviar()" class="ui-btn ui-corner-all ui-shadow ui-icon-check ui-btn-icon-notext">Enviar</a>
+        </div> 
+    </div>
+
+    <div id="revpedido" data-position="fixed" data-role="footer" data-tap-toggle="false"></div>
+  </div>
+
+<div id="mesas" data-role="page">
+
+<div data-role="content" id="contenidoMesas">
+
+</div>
+</div>
+
+<div id="Pop" data-role="page" data-dialog="true">
+<div id="editarPop" data-role="none">
+
+</div>
+</div>
+
+</body>
+</html>
