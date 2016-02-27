@@ -1,0 +1,9 @@
+//JSON de pedidos v2.0
+
+{
+	"version":"2.0",
+	"request":"respuesta",//Retrieve, edit, remove, answer, el nobre de la funcion
+	"message":"Success",
+	"dfdf":["dfdf",5455],
+	"data":{/*Objeto de pedidos*/}// Los parametros de dicha funcion
+}

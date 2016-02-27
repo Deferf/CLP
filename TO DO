@@ -1,0 +1,55 @@
+TO DO
+- Parse pasa a ser serializar, hayq ue encontrar una menra de serializar sin ser tan dependiente del deom
+
+- La manera en que los demas vean el pedido **Parcialmente arreglado, falta implementar de manera completa el objeto de pedido e implementar el shower**
+- Manejar las variaciones de plato (gordita de requeson, asiento, chimi de panela, etc.)
+- En el objeto base agregar una fecha mas simple
+- Estados de cocina.
+- Organizar el codigo, crear secciones porfaa
+- Es necesario crear un "new", una funcion que devuelva un objeto puede ser mas rápida, ocupo investigarlo
+
+- Modificar el JSON base para creaer dos secciones: una de constantes y otra de parseables, las constantes tendran meta informacion que no cambia con el pedido
+- Hacer mas versatiles las funciones para que no les afecte tanto los cambios de objeto.
+- Hacer un objeto comodin para pedidos muy particulares.
+- Ver como aplicar prototipos a los objetos de piezas.
+- Alterar ingredientes de plato
+- Fuck, agregar nuevo plato crea un nuevo pedido. Never thought of that :S
+- ¿Como duplicar pedidos? Faltan muchas opciones de accesibilidad
+- Debo estructurar de nuevo mi codigo, se esta convirtiendo en un desastre
+- Respetar los NUMEROS como tipos de variable
+- Agregar opcion para agregar platos a orden vacia
+- Prestamos
+- Cuentas separadas
+- Rutas para ver plazos y piezas en la funcion search y edit de  controller.php
+- Agregar respuestas de cada funcion en controller.php
+- ¿Debo poner la entrada {"unidad":1} en el MSON para indicar la cantidad default?
+- Agregar en las funciones de javascript un if para la propiedad multiplos
+- Hacer funcion para cambiar precio de PIEZA
+- Simplificar creando valor {"rellenos":[], "vegetales":[]}
+- Sistema de sugerencias (para ello se utilizara el array de abajo)
+- Crear array universal de ingredientes, por si las dudas
+- Posible atributo {"abrev":"Chimi"} para ahorrar espacio en pantalla
+- Agregar un if para ver si tiene {"opcional":[]}
+- {"nombres":[{"nombre":"Chimi", "ingindiv":["Papa","Carne"]}]
+- Definir bien los terminos que uso, orden, pedido, comanda
+- ¿Cómo unir dos ordenes?
+- Como agregar mesas extras
+- Cambiar la manera en la que se serializan los pedidos, pues con jQuery mobile hay mas nesting
+- Agregar botones t (al tiempo), s/(sin), c/(con), etc
+- Evitar agregar mas menus y botones
+- 
+FUTURES
+- Como asignaré los folios?(pues como siempre haz pensado, con una coleccion aparte que maneje los folios)
+- Los pedidos viejos se trasladaran?
+- Colecciones por fecha
+- Una herramienta facil de usar para agregar nuevas piezas
+- Google Drive compatibility and export
+- Encontrar una manera de agregar el MSON al codigo sin tratarlo como una variable
+- Manejar variaciones de mesas 22 - 21 B
+- Menjar nombres de personas por mesa
+LISTO
+- Como reemplazar pieza|plato en JSON **Parcialmente agregado gracias al los identificadores de plato y pieza, falta implementacion(un putero)**
+- Ver que rollo con ese 1 que se recibe con el JSON de aggregate
+- Crear un DAEMON(watchdog) que identifique los cambios en los pedidos, para evitar actualizar el DOM cada 100 ms :OOOO
+- Modificar objeto base para crear objeto de ingredientes ({"lechuga": "true"}??)
+- Modificar piezaForma para que cree los ingredientes a partir del recien modificado objeto base
