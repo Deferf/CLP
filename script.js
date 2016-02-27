@@ -613,12 +613,12 @@ var total = function(folio){
 	$.post( "controller.php", req ).done(function( data ) {
 		var a = JSON.parse(data);
 		console.log(a);
-    	totalCB(a);
+    	totalCB(a);//Utiliza un callback por el pishi asynchronous
 	});	
 }
 
-function totalCB() {
-
+function totalCB(o) {
+	
 }
 
 

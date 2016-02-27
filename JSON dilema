@@ -25,4 +25,45 @@ padre.plato.pieza
 
 platos."8324"."7421".
 
-{"folio":"3192","estado":"Abierto","mesa":"22","togo":"true","orden":{"plato":{"1490":{"3806":{"ingredientes":{"grano":"true","carne":"true","caldo":"true","pata":"true"},"tipo":"Pozole","cantidad":"1","comentarios":"Prueba con estructura JSON formal"},"5851":{"ingredientes":{"lechuga":"true","cebolla":"true","quesosec":"true","queso":"true","crema":"true","pepino":"true","zanahoria":"true","carne":"true","papa":"true"},"tipo":"Flauta","cantidad":"jngjfngjf","comentarios":"fgfgg"}}}},"fecha":"Mon Dec 14 2015 18:07:06 GMT-0700 (Hora est\u00e1ndar Monta\u00f1as (M\u00e9xico))","_id":{"$id":"566f67bc08b7b1200e00002a"}}
+  {
+    "_id": {
+      "$id": "56d1d90208b7b15805000029"
+    },
+    "folio": "2264",
+    "estado": "Abierto",
+    "mesero": "Andres",
+    "mesa": "0",
+    "togo": "true",
+    "orden": {
+      "platos": [
+        {
+          "piezas": [
+            {
+              "nombre": "Gordita de asiento",
+              "tipo": "gorditas",
+              "variacion": "asiento",
+              "cantidad": "1",
+              "precio": "20",
+              "ingredientes": {
+                "Asiento": "true",
+                "Queso chihuahua": "true",
+                "Lechuga": "true",
+                "Cebolla": "true",
+                "Zanahoria": "true",
+                "Pepino": "true",
+                "Crema": "true",
+                "Queso blanco": "true",
+                "Gordita": "true"
+              },
+              "notas": "",
+              "estado": "",
+              "id": "2674"
+            }
+          ],
+          "id": "5386"
+        }
+      ]
+    },
+    "fecha": "Sat Feb 27 2016 10:12:24 GMT-0700 (MST)",
+    "version": "2.0"
+  }
