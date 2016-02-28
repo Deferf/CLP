@@ -617,8 +617,24 @@ var total = function(folio){
 	});	
 }
 
+//encuentra los precios
 function totalCB(o) {
-	
+	var sigma = 0;
+	var orden = o.orden;
+	//Por ahora nos concentraremos en piezas, bebidas despues
+	var platos = orden.platos;
+	var l = platos.length;
+	//Aqui se va de plato en plato a
+	for(var a = 0; a < l; a++){
+
+		var lb = platos[a].piezas.length;
+		for(var b = 0; b < lb; b++){
+			//Por seguridad se realiza un cast de tipo, ya que hay problemas con el DB sobre la mezcolanza de tipos de variable
+			var cast = parseInt(platos[a].piezas[b].precio);
+			sigma += cast;
+		}
+	}
+	return sigma;
 }
 
 
