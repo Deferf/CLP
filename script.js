@@ -610,30 +610,38 @@ var generarMesas = function(nmesas){
 //Preliminar: Te saca el total de una cuenta
 var total = function(folio){
 	var req = new Request("retrieve", {"folio": folio});
-	$.post( "controller.php", req ).done(function( data ) {
+	$.post( "controller.php", req ).success(function( data ) {
 		var a = JSON.parse(data);
-		console.log(a);
-    	totalCB(a);//Utiliza un callback por el pishi asynchronous
+		//console.log(a);
+    	totalCB(a, folio);//Utiliza un callback por el pishi asynchronous
 	});	
+
 }
 
 //encuentra los precios
-function totalCB(o) {
+function totalCB(o,folio) {
+	console.log(o);
 	var sigma = 0;
-	var orden = o.orden;
+	var orden = o[0].orden;
+	console.log(orden);
 	//Por ahora nos concentraremos en piezas, bebidas despues
 	var platos = orden.platos;
+	console.log(platos);
 	var l = platos.length;
 	//Aqui se va de plato en plato a
 	for(var a = 0; a < l; a++){
 
 		var lb = platos[a].piezas.length;
+		console.log("hay " + lb + " piezas");
 		for(var b = 0; b < lb; b++){
 			//Por seguridad se realiza un cast de tipo, ya que hay problemas con el DB sobre la mezcolanza de tipos de variable
 			var cast = parseInt(platos[a].piezas[b].precio);
+			console.log(cast);
 			sigma += cast;
+
 		}
 	}
+	console.log("El total de " + folio + " es " + sigma);
 	return sigma;
 }
 
