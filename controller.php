@@ -2,7 +2,7 @@
 
 	$tipo = $_POST["tipo"];
 	$datos = $_POST["data"];
-	
+
 //Registra un cambio
 	function change(){
 		//global $a;
@@ -15,7 +15,7 @@
 
 		$ide = array("_id" => $id);
 
-		$change = array("$" . "inc" => array("cambios" => 1));
+		$change = array("$" . "inc" => array("cambios" => 1)); //Esta linea crashea... que pedo??????? es por la version de la RPi ocupo una raspberry pi 3
 
 		$admin->update($ide,$change);
 	}
@@ -106,7 +106,7 @@
 			return $cambios[0];
 		}
 		
-		//return $cambios;
+		//return -1;
 	}
 
 	function search($orden){
