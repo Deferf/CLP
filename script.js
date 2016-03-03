@@ -508,12 +508,39 @@ var mostrarMenu = function(omenu,padre){
 		collap.setAttribute("class","lista");
 		$(collap).append("<h4>" + plat +"</h4");
 		for(var piez in men[plat]){
+			//console.log("Nombre "+ piez["nombre"] + " Tipo: " + (piez["nombre"] instanceof Array).toString)
+			console.log(men[plat][piez]["nombre"]);
+			if(men[plat][piez]["nombre"] instanceof Array){
+				console.log("Multiples nombres");
+			var d = men[plat][piez]["nombre"]["length"];
+			console.log("Length " + d);
+			for(var e = 0; e < d; e++ ){
+				console.log("La bebida es: " + men[plat][piez]["nombre"][e]["nombre"]);
+				var nom =  men[plat][piez]["nombre"][e]["nombre"];
+				botonDePieza(collap, plat, piez,nom);
+				
+			}
+			//$(collap).enhanceWithin();
+			//$("#forth").append("<button class='button-circle' onclick='console.log(this)>" + men[plat][piez]["nombre"] + "</button>");
+		}
+			else{
+				var nom =  men[plat][piez]["nombre"];
+				console.log("No Multiple");
+				botonDePieza(collap, plat, piez,nom);
+			}
+		}
+		$(padre).append(collap);
+		$(padre).enhanceWithin();
+	}
+}
+
+var botonDePieza = function(collap, plat, piez, nom){
 			var but = document.createElement("button");
 			but.setAttribute("tip", plat);
 			but.setAttribute("subtip", piez);
 			but.setAttribute("class","ui-btn ui-mini ui-btn-inline");
-			but.innerHTML = men[plat][piez]["nombre"];
-			console.log(but);
+			but.innerHTML = nom;
+			//console.log(but);
 			//console.log("---> " + men[plat][piez]["nombre"] + " $" + men[plat][piez]["precio"]);
 			var pl = "'" + plat.toString() + "'";
 			var pi = "'" + piez.toString() + "'";
@@ -521,12 +548,6 @@ var mostrarMenu = function(omenu,padre){
 			console.log(a);
 			but.setAttribute("onclick", a);
 			$(collap).append(but);
-			//$(collap).enhanceWithin();
-			//$("#forth").append("<button class='button-circle' onclick='console.log(this)>" + men[plat][piez]["nombre"] + "</button>");
-		}
-		$(padre).append(collap);
-		$(padre).enhanceWithin();
-	}
 }
 
 var nPieza = function(esto, tip, subtip){

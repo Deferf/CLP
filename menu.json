@@ -221,50 +221,39 @@ var _menu = {
 		},
 		"bebidas":{
 			"refresco":{
-				"nombres":{
-					"variedad":["CocaCola","CocaCola Light","Fanta Fresa", "Fanta Naranja", "Sangría", "Sprite", "Fresca"]
-				},
-				"precio": 12,
+				"nombre":[{"nombre":"CocaCola","precio":12},{"nombre":"CocaCola Light","precio":12},{"nombre":"Fanta Fresa","precio":12}, {"nombre":"Fanta Naranja","precio":12}, {"nombre":"Sangría","precio":12}, {"nombre":"Sprite","precio":12}, {"nombre":"Fresca","precio":12}],
+				"variedad": true,
+				"precio": 12,//Lo dejare?
 				"tambiente":false,
 				"hielo": true
 			},
 			"agua":{
 				"nombre":"Ciel",
+				"variedad": false,
 				"precio": 10,
 				"tambiente":false,
 				"hielo": true
 			},
 			"jamaica":{
-				"nombre":"Jamaica",
-				"precios":{
-					"jarra": 40,
-					"litro": 25,
-					"vaso": 12,
-					},
+				"nombre":[{"nombre":"Jamaica litro","precio":25},{"nombre":"Jamaica vaso","precio":12},{"nombre":"Jamaica jarra","precio":12}],
+				"variedad": true,
 				"tambiente":false,
 				"hielo": false
 			},
 			"horchata":{
-				"nombre":"Horchata",
-				"precios":{
-					"jarra": 40,
-					"litro": 25,
-					"vaso": 12,
-					},
+				"nombre":[{"nombre":"Horchata litro","precio":25},{"nombre":"Horchata vaso","precio":12},{"nombre":"Horchata jarra","precio":12}],
 				"tambiente":false,
 				"hielo": false
 			},
 			"oolong":{
-				"nombre":"Te oolong",
-				"precios":{
-					"litro": 25,
-					"botella": 15,
-					},
+				"nombre":[{"nombre":"Te oolong litro","precio":25},{"nombre":"Te oolong litro","precio":15}],
+				"variedad": true,
 				"tambiente":false,
 				"hielo": false
 			},
 			"te":{
 				"nombre":"Fuze Tea",
+				"variedad": false,
 				"precio": 18,
 				"tambiente":false,
 				"hielo": false
