@@ -42,8 +42,8 @@ platos."8324"."7421".
               "nombre": "Gordita de asiento",
               "tipo": "gorditas",
               "variacion": "asiento",
-              "cantidad": "1",
-              "precio": "20",
+              "cantidad": 1, //Numero
+              "precio": 20,
               "ingredientes": {
                 "Asiento": "true",
                 "Queso chihuahua": "true",
